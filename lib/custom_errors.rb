@@ -1,4 +1,5 @@
 class Person
+  
   attr_accessor :partner, :name
 
   def initialize(name)
@@ -8,6 +9,9 @@ class Person
   def get_married(person)
     self.partner = person
     person.partner = self
+  end
+
+  class PartnerError < StandardError
   end
 
 end
